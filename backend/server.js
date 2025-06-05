@@ -5,7 +5,7 @@ import movieRouter from './router/movie.route.js'
 import tvRouter from './router/tv.route.js'
 import searchRouter from './router/search.route.js'
 import dotenv from 'dotenv'
-import { connectDB, NODE_ENV } from './config/db.js'
+import { connectDB } from './config/db.js'
 import cookieParser from 'cookie-parser'
 import { protectRouter } from './middleware/protectedRouter.js'
 
@@ -28,7 +28,7 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
   });
 }
-console.log(process.env.NODE_ENV)
+// console.log(process.env.NODE_ENV)
 app.listen(5000, () => {
   connectDB()
   console.log('server worked at http://localhost:5000/')
