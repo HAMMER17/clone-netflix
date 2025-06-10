@@ -35,7 +35,7 @@ const HistoryPage = () => {
     <div className='bg-black text-white min-h-screen'>
       <Navbar />
       <h1 className='p-2'>Search History</h1>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-4'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-4 p-2'>
         {searchHistory?.map((item) => (
 
           <div key={item.id} className='bg-gray-800 p-4 rounded flex justify-between items-center'>
